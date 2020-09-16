@@ -1,0 +1,9 @@
+/**  Basic Page CSS **/
+body {
+    font-weight: 200;
+    background-color: #337ab7;
+  }
+  
+  .addticket{
+    margin: 1rem 5rem;
+}

@@ -1,0 +1,27 @@
+<div class="col-6">
+    <button class="addticket" [routerLink]="['/addTicket']">Add New Ticket</button>
+</div>
+<div class="col-6" *ngFor="let item of tickets | paginate: {
+itemsPerPage: 7, currentPage: page}">
+    <div class="card" style="width: 18rem;">
+        <div class="card-title" [routerLink]="['/editTicket', item._id]">
+            <h1>Ticket {{item.title}}</h1>
+        </div>
+
+        <div>
+            <span class="label-item">Priority: {{item.priority}} </span>
+
+        </div>
+
+        <div>date: {{item.createdAt | date:'short'}}</div>
+
+        <button class="pet-delete btn btn-sm btn-danger" (click)="remove(item._id)">
+            Delete <fa-icon [icon]="faTimes"></fa-icon>
+        </button>
+    </div>
+</div>
+<div class="col-6">
+    <button class="addticket" [routerLink]="['/addTicket']">Add New Ticket</button>
+</div>
+
+<pagination-controls (pageChange)="handlePageChange($event)"></pagination-controls>

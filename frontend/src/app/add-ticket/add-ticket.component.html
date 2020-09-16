@@ -1,0 +1,51 @@
+<div class="container">
+    <form id="contact" class="col-6">
+        <h3>Add new ticket</h3>
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input name="title" [(ngModel)]="ticket.title" placeholder="Enter title" required />
+        </div>
+        <div class="form-group">
+            <label for="priority">Priority:</label>
+            <select name="priority" [(ngModel)]="ticket.priority">
+                <option value="" selected disabled>Select</option>
+                <option>LOW</option>
+                <option>MEDIUM</option>
+                <option>HIGH</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="reason">Reason:</label>
+            <select name="reason" [(ngModel)]="ticket.reason">
+                <option value="" selected disabled>Select</option>
+                <option value="Appointament">Appointament</option>
+                <option value="Return">Return</option>
+                <option value="Claims">Claims</option>
+                <option value="Compliments">Compliments</option>
+            </select>
+        </div>
+        <label for="description">Description:</label>
+        <textarea name="description" [(ngModel)]="ticket.description"></textarea>
+        <div>
+            <button #addButton [ngStyle]="{'display':AddButtondisplay}" type="button" class="btn btn-primary"
+                (click)="post()">Create</button>
+
+            <button #addButton type="button" class="btn btn-secondary" [routerLink]=" ['/tickets']">Cancel</button>
+        </div>
+
+        <!-- Modal -->
+        <div class="backdrop" [ngStyle]="{'display':display}"></div>
+        <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h3>
+                            <fa-icon [icon]="faSpinner"></fa-icon>{{counter}}
+                        </h3>
+                        <h4>Ticket saved successfully!</h4>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal !-->
+    </form>
+</div>
