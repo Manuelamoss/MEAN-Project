@@ -1,5 +1,5 @@
-# Project_Module_4
-This project is part of the MEAN/MERN Stack Developer Path at SAP Portugal. The main focus is creating a system for tickets management system using Node, Express, Mongo, JavaScript and Angular. 
+# MEAN-Project
+This project is part of my studies to became a MEAN Stack Developer. The main focus is creating a system for tickets management system using Mongo,Express, Angular and Node. 
 
 ## Prerequisites 
 Make sure you have these installed
@@ -22,6 +22,6 @@ Make sure you have these installed
 The Homepage http://localhost:4200/tickets shows the list of the ticket. It is showing 8 tickets per page. When "add ticket" button is clicked the user is redirected to the page http://localhost:4200/addTicket, where can create a new ticket. After saving, a popup is shown.
 
 ## Contact
-If you want to contact me you can reach me at manuela.moss@sap.com
-# MEAN-Project
-# MEAN-Project
+If you want to contact me you can reach me at manuelamoss@gmail.com
+
+
