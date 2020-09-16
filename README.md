@@ -7,7 +7,7 @@ Make sure you have these installed
    - [git](http://git-scm.com/)
    - [angular cli](https://cli.angular.io/)
    
-## Installing projectModule_4
+## Installing MEAN-Project
 1. Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) `> git clone CLONEURL`
 2. CD to the folder `cd Backend`
 4. Run `npm install` to install the project dependencies
