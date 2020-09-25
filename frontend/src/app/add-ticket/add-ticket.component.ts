@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { WebService, Ticket } from '../web.service';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute } from '@angular/router';
@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./add-ticket.component.css']
 })
 export class AddTicketComponent implements OnInit {
+
   public ticket: Ticket = {
     title: '',
     priority: '',

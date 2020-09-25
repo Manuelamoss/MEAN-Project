@@ -13,6 +13,9 @@ export class ListTicketComponent implements OnInit {
   faTimes = faTimes;
 
   page = 1;
+  onPosted(tickets) {
+    console.log(tickets);
+  }
 
   handlePageChange(event) {
     this.page = event;
@@ -32,15 +35,13 @@ export class ListTicketComponent implements OnInit {
           console.log(error);
         });
   }
-  refresh(): void {
-    window.location.reload();
-  }
+
 
   remove(id): void {
     this.webService.delete(id)
       .subscribe(
         response => {
-          this.refresh();
+          this.retrieveAllTickets();
         },
         error => {
           console.log(error);
