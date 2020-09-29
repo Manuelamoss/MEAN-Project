@@ -13,9 +13,6 @@ export class ListTicketComponent implements OnInit {
   faTimes = faTimes;
 
   page = 1;
-  onPosted(tickets) {
-    console.log(tickets);
-  }
 
   handlePageChange(event) {
     this.page = event;
@@ -32,7 +29,8 @@ export class ListTicketComponent implements OnInit {
           this.tickets = data;
         },
         error => {
-          console.log(error);
+          console.log("unuble", error);
+          //this.normalError();
         });
   }
 
@@ -44,12 +42,9 @@ export class ListTicketComponent implements OnInit {
           this.retrieveAllTickets();
         },
         error => {
-          console.log(error);
+          //console.log(error);
+
         });
-  }
-
-  retrieveOneTicket(id) {
-
   }
 
 }
