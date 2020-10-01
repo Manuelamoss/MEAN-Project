@@ -27,11 +27,8 @@ export class ListTicketComponent implements OnInit {
       .subscribe(
         data => {
           this.tickets = data;
-        },
-        error => {
-          console.log("unuble", error);
-          //this.normalError();
-        });
+        })
+
   }
 
 

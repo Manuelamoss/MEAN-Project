@@ -18,10 +18,12 @@ export const addnewTicket = (req, res) => {
 export const getTickettWithId = (req, res) => {
     Ticket.findOne({ _id: req.params.ticketId }, (err, ticket) => {
         if (err || !ticket) {
-            res.send({
-                error_code: "Bad request",
-                message: 'Ticket doesn\'t exist'
-            });
+            return res.status(401).json({ message: 'Ticket doesn\'t exist' });
+            // res.send({
+            //     error_code: "Bad request",
+            //     message: 'Ticket doesn\'t exist'
+            // });
+
         }
         res.json(ticket);
     });
@@ -31,7 +33,7 @@ export const getAllTickets = (req, res) => {
 
     Ticket.find({}, (err, ticket) => {
         if (err) {
-            res.send(err);
+            return res.send(err);
         }
         res.json(ticket);
     }).sort({ createdAt: -1 });
@@ -41,7 +43,7 @@ export const deleteTicket = (req, res) => {
 
     Ticket.remove({ _id: req.params.ticketId }, (err) => {
         if (err) {
-            res.send(err);
+            return res.status(404).send('Ticket doesn\'t exist');
 
         }
         res.json({ message: 'Successfully deleted ticket' });
