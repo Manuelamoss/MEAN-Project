@@ -15,7 +15,7 @@ itemsPerPage: 7, currentPage: page}">
 
         <div>date: {{item.createdAt | date:'short'}}</div>
 
-        <button class="pet-delete btn btn-sm btn-danger" (click)="remove(123)">
+        <button class="pet-delete btn btn-sm btn-danger" (click)="remove(item._id)">
             Delete <fa-icon [icon]="faTimes"></fa-icon>
         </button>
     </div>
