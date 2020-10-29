@@ -7,3 +7,6 @@ body {
   .addticket{
     margin: 1rem 5rem;
 }
+.row{
+  display: grid;
+}
