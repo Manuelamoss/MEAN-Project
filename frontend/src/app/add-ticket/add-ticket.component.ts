@@ -57,7 +57,7 @@ export class AddTicketComponent implements OnInit {
       this.counter = this.counter - 1;
       if (this.counter === 0) {
         this.onCloseHandled();
-        this.refresh();
+        this.backList();
         clearInterval(intervalId);
       }
     }, 1000)
@@ -65,8 +65,8 @@ export class AddTicketComponent implements OnInit {
   onCloseHandled() {
     this.display = 'none';
   }
-  refresh(): void {
-    window.location.reload();
+  backList(): void {
+    window.location.assign('/tickets');
   }
 
 }
