@@ -18,12 +18,12 @@
                 Delete <fa-icon [icon]="faTimes"></fa-icon>
             </button>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col">
                 <button class="addticket" [routerLink]="['/addTicket']">Add New Ticket</button>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col">
                 <pagination-controls (pageChange)="handlePageChange($event)"></pagination-controls>
             </div>
